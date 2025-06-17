@@ -1,0 +1,6 @@
+# Data configuration file for testing
+
+train: /media/luh0419/Lucky_SSD/YOLO_Project/datasets/IDD/cross country/train/images
+val: /media/luh0419/Lucky_SSD/YOLO_Project/datasets/IDD/cross country/train/images
+nc: 5
+names: [’Car’, ’Van’, ’Truck’, ’Pedestrians’, ’Person_Sitting’]

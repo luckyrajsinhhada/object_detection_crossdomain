@@ -1,0 +1,6 @@
+#  Data Configuration File (data.yaml)
+
+train: # Path to the training images
+val: # path to the validation images
+nc: 5
+names: [’Car’, ’Van’, ’Truck’, ’Pedestrians’, ’perosn_sitting’]
