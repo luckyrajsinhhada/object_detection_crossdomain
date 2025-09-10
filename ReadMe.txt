@@ -2,9 +2,9 @@
 
 **Evaluating Cross-Domain Generalization of Object Detection Models in Autonomous Driving**
 
----
 
-## 🔹 Project Overview
+
+## project Overview
 This project investigates how object detection models for autonomous driving generalize across countries. Models trained on one dataset may perform poorly when tested on a dataset from another country due to differences in traffic patterns, road infrastructure, and environmental conditions.
 
 - **Training Dataset:** [KITTI](http://www.cvlibs.net/datasets/kitti/) (Germany)  
@@ -12,7 +12,7 @@ This project investigates how object detection models for autonomous driving gen
 
 ---
 
-## 🔹 Problem Statement
+## Problem Statement
 Autonomous vehicle perception systems often fail to generalize across regions. This project demonstrates how an object detection model trained in Germany performs on Indian driving data, highlighting challenges in cross-country deployment.
 
 **Key Observation:**  
@@ -23,7 +23,7 @@ The significant drop shows the **generalization gap** and the need for region-ad
 
 ---
 
-## 🔹 Approach & Methods
+## Approach & Methods
 - Framework: **YOLOv8** (Ultralytics)
 - Training:
   - Trained on KITTI dataset (bounding box annotations for vehicles, pedestrians, etc.)
@@ -35,7 +35,7 @@ The significant drop shows the **generalization gap** and the need for region-ad
 
 ---
 
-## 🔹 Results
+## Results
 - KITTI → KITTI: **92% mAP@0.5** 
 - KITTI → IDD: **12% mAP@0.5** 
 - Demonstrates severe generalization issues for real-world deployment of autonomous vehicles.
@@ -45,13 +45,13 @@ The significant drop shows the **generalization gap** and the need for region-ad
 
 ---
 
-## 🔹 Insights & Takeaways
+## Insights & Takeaways
 - Object detection models trained in one country do **not reliably generalize** to another country.  
 - Highlights importance of **cross-domain adaptation**, data augmentation, and region-specific datasets for autonomous driving.
 
 ---
 
-## 🔹 How to Run
+## How to Run
 ```bash
 # Clone the repo
 git clone https://github.com/luckyrajsinhhada/object_detection_crossdomain.git
@@ -65,3 +65,4 @@ python train.py --data kitti.yaml --weights yolov8n.pt
 
 # Test on IDD dataset
 python test.py --data idd.yaml --weights best.pt
+
