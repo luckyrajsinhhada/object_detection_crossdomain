@@ -15,7 +15,7 @@ This project investigates how object detection models for autonomous driving gen
 ## Problem Statement
 Autonomous vehicle perception systems often fail to generalize across regions. This project demonstrates how an object detection model trained in Germany performs on Indian driving data, highlighting challenges in cross-country deployment.
 
-**Key Observation:**  
+**Key Observation:**
 - KITTI → KITTI: **92% mAP@0.5**  
 - KITTI → IDD: **12% mAP@0.5**  
 
@@ -54,5 +54,6 @@ python train.py --data kitti.yaml --weights yolov8n.pt
 
 # Test on IDD dataset
 python test.py --data idd.yaml --weights best.pt
+
 
 
