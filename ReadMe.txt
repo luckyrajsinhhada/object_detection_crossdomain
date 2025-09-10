@@ -10,7 +10,7 @@ This project investigates how object detection models for autonomous driving gen
 - **Training Dataset:** [KITTI](http://www.cvlibs.net/datasets/kitti/) (Germany)  
 - **Testing Dataset:** [IDD](https://idd.insaan.iiit.ac.in/) (India)
 
----
+
 
 ## Problem Statement
 Autonomous vehicle perception systems often fail to generalize across regions. This project demonstrates how an object detection model trained in Germany performs on Indian driving data, highlighting challenges in cross-country deployment.
@@ -21,7 +21,7 @@ Autonomous vehicle perception systems often fail to generalize across regions. T
 
 The significant drop shows the **generalization gap** and the need for region-adaptive models in autonomous driving.
 
----
+
 
 ## Approach & Methods
 - Framework: **YOLOv8** (Ultralytics)
@@ -33,29 +33,18 @@ The significant drop shows the **generalization gap** and the need for region-ad
 - Analysis:
   - Compared mAP@0.5 metrics between same-domain and cross-domain evaluation
 
----
+
 
 ## Results
 - KITTI → KITTI: **92% mAP@0.5** 
 - KITTI → IDD: **12% mAP@0.5** 
 - Demonstrates severe generalization issues for real-world deployment of autonomous vehicles.
 
-**Sample Results:**  
-![Sample Output](link_to_sample_image_or_gif)  
 
----
-
-## Insights & Takeaways
+## Insights
 - Object detection models trained in one country do **not reliably generalize** to another country.  
 - Highlights importance of **cross-domain adaptation**, data augmentation, and region-specific datasets for autonomous driving.
 
----
-
-## How to Run
-```bash
-# Clone the repo
-git clone https://github.com/luckyrajsinhhada/object_detection_crossdomain.git
-cd object_detection_crossdomain
 
 # Install dependencies
 pip install -r requirements.txt
@@ -65,4 +54,5 @@ python train.py --data kitti.yaml --weights yolov8n.pt
 
 # Test on IDD dataset
 python test.py --data idd.yaml --weights best.pt
+
 
